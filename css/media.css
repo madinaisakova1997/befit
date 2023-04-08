@@ -1,0 +1,201 @@
+@media (max-width: 778px) {
+    .container{
+        max-width: 730px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 20px;
+    }
+    .hero_content-title{
+        font-size: 45px;   
+    }
+    .place_cards-title {
+        font-size: 30px;
+    }
+    .recipes_content{
+        margin-top:60px;
+    }
+    .recipes_content-subtitle{
+        font-size: 12px;    
+    }
+    .challenge_content figure h3{
+        margin: 130px 0;
+    }
+    .footer_links {
+        font-size: 10px;
+    }
+    .footer_links:not(:last-child){
+        margin-right:10px ;
+    }
+    .link_icon:not(:last-child){
+        padding-right:10px;
+    }
+    .link_icon:nth-child(1){
+        margin-left:100px ;
+    }
+    .footer_info{
+        font-size: 12px;  
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        max-width: 570px;
+    }
+    .hero_content-title{
+        font-size: 40px; 
+        margin-left: 50px;  
+    }
+    .place_cards-title {
+        font-size: 20px;
+        margin: 25px 0;
+    }
+    .place_btn{
+        padding: 8px 25px;
+    }
+    .recipes_content-subtitle{
+        display: none;
+    }
+    .recipes_title{
+        font-size: 25px;
+    }
+    .recipes_content-title{
+        font-size: 12px;
+        text-align: start;
+    }
+    .recipes_content{
+        padding: 10px;
+        margin-top:100px;
+    }
+    .challenge_content figure h3{
+        margin: 90px 0;
+    }
+    .challenge_content-title{
+        font-size: 30px;
+    }
+    .link_icon:nth-child(1){
+        margin-left:80px ;
+    }
+    .footer_links:not(:last-child){
+        margin-right:5px ;
+    }
+    .footer_links {
+        font-size: 8px;
+    }
+    .link_icon{
+        font-size: 15px; 
+    }
+}
+@media (max-width: 544px) {
+   
+    .mobile-menu{
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 40px;
+        z-index: 9;
+    }
+    .menu-wrap{
+        visibility: hidden;
+        opacity: 0;
+    }
+    .menu-wrap.menu_active{
+        visibility: visible;
+        opacity: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 9;
+        transition: all 0.7s;
+
+    }
+    .menu-wrap.menu_active .menu a{
+        display: block;
+        text-align: center;
+        margin: auto;
+        z-index: 9;
+        padding-top: 10px;
+    }
+    .header_link:not(:last-child){
+        margin-right: 40px;
+    }
+}
+@media (max-width: 480px){
+    .header_link:not(:last-child){
+        margin-right: 30px;
+    }
+    .hero_content-title{
+        font-size: 35px; 
+        margin-left: 30px;  
+    }
+    .place-subtitle{
+        font-size: 12px;
+    }
+    .place_cards-title {
+        font-size: 20px;
+    }
+    .place_btn{
+        padding: 5px 20px;
+        font-size: 0.750em;
+    }
+    .recipes_content{
+        background: none;
+        margin-top:50px;
+    }
+    .recipes_title{
+        line-height: 100%;   
+    }
+    .challenge_content-title{
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .challenge_content figure h3{
+        margin: 70px 0;
+    }
+    .footer_info{
+        font-size: 10px;
+        line-height: 10px;
+    }
+}
+@media (max-width: 420px){
+    .header_link:not(:last-child){
+        margin-right: 10px;
+    }
+    .hero_content-title{
+        font-size: 32px; 
+        margin-left: 20px;  
+    }
+    .challenge_content-title{
+        font-size: 20px;
+    }
+    .challenge_content figure h3{
+        margin: 50px 0;
+    }
+    .link_icon:nth-child(1){
+        margin-left:40px ;
+    }
+    .footer_info{
+        font-size: 8px;
+    }
+    .footer_links:not(:last-child){
+        margin-right:3px ;
+    }
+    .link_icon:not(:last-child){
+        padding-right:5px;
+    }
+}
+@media (max-width: 375px){
+    .hero_content-title{
+        font-size: 20px;
+        margin-left: 15px; 
+    }
+}
+   
+
+
+

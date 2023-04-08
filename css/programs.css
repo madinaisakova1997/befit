@@ -1,0 +1,407 @@
+@import "./fonts.css";
+/* BASE CONFIG */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #f3f3f3;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.container {
+    max-width: 1060px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -10px;    
+}
+.gap {
+    gap: 30px;
+}
+.col-4 {
+    width: 33.33%;
+}
+.col-3 {
+    width: 25%;
+    padding: 0 10px;
+}
+.col-6{
+    width: 50%;
+    padding: 0 10px;
+
+}
+.f-w {
+    flex-wrap: wrap;
+}
+.d-flex {
+    display: flex;
+    margin: 0 10px;    
+}
+.j-b {
+    justify-content: space-between;
+}
+.a-c {
+    align-items: center;
+}
+.j-c{
+    justify-content: center;
+}
+/* BASE CONFIG */
+/* HEADER */
+.header{
+    background-color: #f3f3f3;
+}
+.header_container{
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: center;    
+}
+.header_nav{
+    text-align: center;
+    height: 60px;
+}
+.header_logo{
+    color: #000000;
+    font-weight: 700px;
+    font-size: 50px;
+}
+.header_link{
+    display: inline-block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #373535;
+    opacity: 0.9;
+    transition: 0.5s;
+    position: relative;
+}
+.title{
+    text-decoration: underline;
+}
+.header_link:not(:last-child){
+    margin-right: 60px;
+}
+.header_link:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px; /* Высота линии */
+    background-color: black; /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+.header_link:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px; /* Высота линии */
+    background-color: black; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */
+}
+.header_btn{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #373535;
+    opacity: 0.9;
+    transition: 0.5s;
+    border-radius: 5px;
+    border:none;
+    padding: 10px 20px;
+    transition: .6s;
+}
+.header_btn:hover{
+    color: #f3f3f3;
+    background: #373535;
+
+}
+/* HEADER */
+/* CHALLENGE */
+
+.challenge_content-img{
+    width: 100%;
+}
+.challenge_content-title{
+   font-weight: 600;
+   font-size: 40px;
+   text-align: center;
+   letter-spacing: 5px;
+   text-transform: uppercase;
+   color: #fff;}
+.challenge_content-subtitle{
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 20px;
+   text-align: center;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+   color: #fff;
+}
+.challenge_link{
+   text-decoration: underline;
+}
+/* Общие стили */
+*, *:after, *:before { 
+   border-box; 
+   box-sizing: border-box; 
+}
+.clearfix:before, .clearfix:after { 
+   content: ''; 
+   display: table; 
+}
+.clearfix:after { 
+   clear: both; 
+}
+.challenge_content {
+   overflow: hidden;
+   margin: 0;
+   width: 100%;
+   list-style: none;
+   text-align: center;
+}
+.challenge_content figure {
+   position: relative;
+   z-index: 1;
+   display: inline-block;
+   overflow: hidden;
+   background: #494a4a;
+   text-align: center;
+   cursor: pointer; 
+}
+.challenge_content figure img {
+   position: relative;
+   display: block;
+   min-height: 100%;
+   opacity: 0.8;
+}
+.challenge_content figure figcaption {
+   padding: 2em;
+   color: #fff;
+   text-transform: uppercase;
+   font-size: 1.25em;
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+}
+.challenge_content figure figcaption::before,
+.challenge_content figure figcaption::after {
+   pointer-events: none;
+}
+.challenge_content figure figcaption{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+.challenge_content figure h3{
+   margin: 200px 0 0 0;
+}
+.challenge_content figure p {
+   letter-spacing: 1px;
+   font-size: 68.5%;
+}
+
+/* Эффект при наведении */
+figure.effect {
+   background: #494a4a;
+}
+figure.effect img {
+   width: -webkit-calc(100% + 20px);
+   width: calc(100% + 20px);
+   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+   transition: opacity 0.35s, transform 0.35s;
+   transform: scale(1.1);
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+}
+figure.effect:hover img {
+   opacity: 0.4;
+   -webkit-transform: translate3d(0,0,0);
+   transform: translate3d(0,0,0);
+}
+figure.effect figcaption {
+   text-align: left;
+}
+figure.effect h3 {
+   position: relative;
+   overflow: hidden;
+   padding: 0.5em 0;
+}
+figure.effect h3::after {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 3px;
+   background: #fff;
+   content: '';
+   -webkit-transition: -webkit-transform 0.35s;
+   transition: transform 0.35s;
+   -webkit-transform: translate3d(-100%,0,0);
+   transform: translate3d(-100%,0,0);
+}
+figure.effect:hover h3::after {
+   -webkit-transform: translate3d(0,0,0);
+   transform: translate3d(0,0,0);
+}
+figure.effect p {
+   padding: 1em 0;
+   opacity: 0;
+   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+   transition: opacity 0.35s, transform 0.35s;
+   -webkit-transform: translate3d(100%,0,0);
+   transform: translate3d(100%,0,0);
+}
+figure.effect:hover p {
+   opacity: 1;
+   -webkit-transform: translate3d(0,0,0);
+   transform: translate3d(0,0,0);
+}
+/*CHALLENGE  */
+/* FORM */
+.form{
+    padding: 128px 0;
+}
+.form_flex{
+    display: block;
+}
+.form_content-title{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #1E1B1B;
+    margin-bottom: 32px;
+}
+.form_inp{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #161722;
+    width: 624px;
+    padding: 20px 0 20px 20px;
+    border: none;
+    background: #FFFFFF;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.form_btn{
+    background: #494a4a;
+    border-radius: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    width: 624px;
+    padding: 24px 0;   
+    cursor: pointer;
+    transition: 0.4s;
+}
+.form_btn:hover{
+    font-weight: 700;
+    text-decoration: underline;
+    background: #dfb387;
+}
+
+.form_details-title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #161722;
+    margin-bottom: 8px;
+}
+.form_details-subtitle{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #1E1B1B;
+    opacity: 0.7;
+    margin-bottom: 8px;
+}
+.form_contacts{
+    margin-bottom: 32px;
+}
+.form_details{
+    margin: 60px 0 0 128px;
+}
+/* FORM */
+
+/* FOOTER */
+.footer{
+    padding: 20px 0;
+}
+.footer_logo{
+    font-size: 30px;
+    font-weight: 600;
+    color: #373535;
+    text-transform: uppercase;
+}
+.line{
+    background: #373535;
+    border-radius: 0px;
+    height: 3px;
+    margin: 30px 0;
+}
+.footer_info{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #373535; 
+    transition: 0.4s;  
+}
+.footer_links{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #373535; 
+    transition: 0.4s;  
+}
+.footer_links:not(:last-child){
+    margin-right:20px ;
+}
+.footer_links:hover{
+    text-decoration: underline;
+}
+.link_icon{
+    color:  #b02323;
+    font-size: 20px; 
+    transition: 0.4s;  
+    cursor: pointer; 
+}
+.link_icon:nth-child(1){
+    margin-left:200px ;
+}
+.link_icon:not(:last-child){
+    padding-right:20px;
+}
+/* FOOTER */
