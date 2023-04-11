@@ -1,10 +1,11 @@
 @import "./fonts.css";
-/* BASE CONFIG */
+* BASE CONFIG */
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -33,9 +34,6 @@ button {
     flex-wrap: wrap;
     margin: 0 -10px;    
 }
-.gap {
-    gap: 30px;
-}
 .col-4 {
     width: 33.33%;
 }
@@ -58,13 +56,58 @@ button {
 .j-b {
     justify-content: space-between;
 }
-.a-c {
-    align-items: center;
-}
 .j-c{
     justify-content: center;
 }
+.a-c{
+    align-items: center;
+}
 /* BASE CONFIG */
+/* MOBILE-MENU */
+.menu-btn{
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+.menu-btn span:nth-child(1){
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #737373;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -4px;
+}
+.menu-btn span:nth-child(2){
+    display: block;
+    width: 16px;
+    height: 2px;
+    background-color: #737373;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(2px);
+    margin-left: -10px;
+    margin-top: -2px;
+}
+.menu-btn span:nth-child(3){
+    display: block;
+    width: 12px;
+    height: 2px;
+    background-color: #737373;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(5px);
+    margin-left: -10px;
+    margin-top: -1px;
+}
+.mobile-menu{
+    display: none;
+}
 /* HEADER */
 .header{
     background-color: #f3f3f3;
@@ -75,13 +118,13 @@ button {
     align-items: center;
     justify-content: center;    
 }
-.header_nav{
+.menu{
     text-align: center;
     height: 60px;
 }
 .header_logo{
     color: #000000;
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 50px;
 }
 .header_link{
@@ -93,9 +136,6 @@ button {
     opacity: 0.9;
     transition: 0.5s;
     position: relative;
-}
-.title{
-    text-decoration: underline;
 }
 .header_link:not(:last-child){
     margin-right: 60px;
@@ -122,22 +162,14 @@ button {
     background-color: black; /* Цвет подчеркивания при появлении линии*/
     transition: width 0.5s;  /* Время эффекта */
 }
-.header_btn{
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+.header_svg{
     color: #373535;
-    opacity: 0.9;
-    transition: 0.5s;
-    border-radius: 5px;
-    border:none;
-    padding: 10px 20px;
+    width: 25px;
     transition: .6s;
+    text-align: center;
 }
-.header_btn:hover{
-    color: #f3f3f3;
-    background: #373535;
-
+.header_svg:hover{
+    color:  #b02323;
 }
 /* HEADER */
 /* POPULAR */
@@ -208,50 +240,36 @@ ul{
     width: 650px;
     
 }
+/* POPULAR */
 /* FOOTER */
 .footer{
     padding: 20px 0;
 }
-.footer_logo{
-    font-size: 30px;
-    font-weight: 600;
-    color: #373535;
-    text-transform: uppercase;
+.heart{
+    color: #b02323;
 }
 .line{
     background: #373535;
     border-radius: 0px;
     height: 3px;
-    margin: 30px 0;
-}
+    margin-bottom: 30px;}
 .footer_info{
     font-weight: 400;
     font-size: 14px;
     line-height: 14px;
-    color: #373535; 
-    transition: 0.4s;  
+    color: #373535;
+    text-transform: uppercase;
 }
-.footer_links{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 14px;
-    color: #373535; 
-    transition: 0.4s;  
-}
-.footer_links:not(:last-child){
-    margin-right:20px ;
-}
-.footer_links:hover{
-    text-decoration: underline;
+.footer_logo{
+    color: #000000;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18px;
 }
 .link_icon{
     color:  #b02323;
     font-size: 20px; 
     transition: 0.4s;  
-    cursor: pointer; 
-}
-.link_icon:nth-child(1){
-    margin-left:200px ;
 }
 .link_icon:not(:last-child){
     padding-right:20px;

@@ -1,3 +1,7 @@
+@media (max-width: 1200px){}
+@media (max-width: 1024px){}
+@media (max-width: 991px){}
+
 @media (max-width: 778px) {
     .container{
         max-width: 730px;
@@ -5,45 +9,34 @@
         width: 100%;
         padding: 0 20px;
     }
+    /* HERO */
     .hero_content-title{
         font-size: 45px;   
     }
+    /* HERO */
+    /* PLACE */
     .place_cards-title {
         font-size: 30px;
     }
-    .recipes_content{
-        margin-top:60px;
-    }
+    /* PLACE */
+    /* RECIPES */
     .recipes_content-subtitle{
         font-size: 12px;    
-    }
-    .challenge_content figure h3{
-        margin: 130px 0;
-    }
-    .footer_links {
-        font-size: 10px;
-    }
-    .footer_links:not(:last-child){
-        margin-right:10px ;
-    }
-    .link_icon:not(:last-child){
-        padding-right:10px;
-    }
-    .link_icon:nth-child(1){
-        margin-left:100px ;
-    }
-    .footer_info{
-        font-size: 12px;  
-    }
+    }   
+        /* RECIPES */
+
 }
 @media (max-width: 600px) {
     .container {
         max-width: 570px;
     }
+    /* HERO */
     .hero_content-title{
         font-size: 40px; 
         margin-left: 50px;  
     }
+    /* HERO */
+    /* PLACE */
     .place_cards-title {
         font-size: 20px;
         margin: 25px 0;
@@ -51,6 +44,16 @@
     .place_btn{
         padding: 8px 25px;
     }
+     /* PLACE */
+     /* COLLECTION */
+    .collection .col-3{
+        width: 100%;
+     }
+     .collection .d-flex{
+        display: block;
+     }
+     /* COLLECTION */
+    /* RECIPES */
     .recipes_content-subtitle{
         display: none;
     }
@@ -59,33 +62,30 @@
     }
     .recipes_content-title{
         font-size: 12px;
-        text-align: start;
     }
-    .recipes_content{
-        padding: 10px;
-        margin-top:100px;
+     /* RECIPES */
+     /* CHALLENGE */
+    .challenge_content-title {
+        font-size: 25px;
     }
-    .challenge_content figure h3{
-        margin: 90px 0;
+    /* CHALLENGE */
+    /* FOOTER */
+    .footer_info{
+        font-size: 12px;
     }
-    .challenge_content-title{
-        font-size: 30px;
-    }
-    .link_icon:nth-child(1){
-        margin-left:80px ;
-    }
-    .footer_links:not(:last-child){
-        margin-right:5px ;
-    }
-    .footer_links {
-        font-size: 8px;
+    .footer_logo{
+        font-size: 15px;
     }
     .link_icon{
         font-size: 15px; 
     }
+    .link_icon:not(:last-child){
+        padding-right:20px;
+    }  
+    /* FOOTER */
 }
 @media (max-width: 544px) {
-   
+    /* BURGER MENU */
     .mobile-menu{
         display: block;
         position: absolute;
@@ -93,11 +93,11 @@
         right: 40px;
         z-index: 9;
     }
-    .menu-wrap{
+    .menu_wrap{
         visibility: hidden;
         opacity: 0;
     }
-    .menu-wrap.menu_active{
+    .menu_wrap.menu_active{
         visibility: visible;
         opacity: 1;
         position: fixed;
@@ -114,87 +114,111 @@
         transition: all 0.7s;
 
     }
-    .menu-wrap.menu_active .menu a{
+    .menu_wrap.menu_active .menu a{
         display: block;
         text-align: center;
         margin: auto;
         z-index: 9;
         padding-top: 10px;
     }
-    .header_link:not(:last-child){
-        margin-right: 40px;
+    /* BURGER MENU */
+    /* CHALLENGE */
+    .challenge_content-title {
+        font-size: 22px;
     }
+    /* CHALLENGE */
+    /* COLLECTION */
+    .collection_title{
+        font-size: 30px;
+    }
+    /* COLLECTION */
 }
 @media (max-width: 480px){
-    .header_link:not(:last-child){
-        margin-right: 30px;
+    /* HEADER */
+    .header_container{
+        height: 60px;
     }
+    .header_logo {
+        font-size: 40px;
+    }
+    /* HEADER */
+    /* HERO */
     .hero_content-title{
-        font-size: 35px; 
-        margin-left: 30px;  
+        font-size: 35px;   
     }
-    .place-subtitle{
-        font-size: 12px;
-    }
-    .place_cards-title {
-        font-size: 20px;
-    }
-    .place_btn{
-        padding: 5px 20px;
-        font-size: 0.750em;
-    }
-    .recipes_content{
-        background: none;
-        margin-top:50px;
-    }
-    .recipes_title{
-        line-height: 100%;   
-    }
-    .challenge_content-title{
-        font-size: 25px;
-        font-weight: 500;
-    }
-    .challenge_content figure h3{
-        margin: 70px 0;
-    }
-    .footer_info{
-        font-size: 10px;
-        line-height: 10px;
-    }
-}
-@media (max-width: 420px){
-    .header_link:not(:last-child){
-        margin-right: 10px;
-    }
-    .hero_content-title{
-        font-size: 32px; 
-        margin-left: 20px;  
-    }
-    .challenge_content-title{
-        font-size: 20px;
-    }
-    .challenge_content figure h3{
+    /* HERO */
+    /* PLACE */
+    .place-subtitle {
         margin: 50px 0;
     }
-    .link_icon:nth-child(1){
-        margin-left:40px ;
+    .place-subtitle{
+        font-size: 13px;   
     }
-    .footer_info{
+    .place_cards-title {
+        font-size: 15px;
+    }
+    /* PLACE */
+    /* COLLECTION */
+    .collection {
+        padding: 70px 0;
+    }
+    /* COLLECTION */
+    /* RECIPES */
+    .recipes {
+        padding: 70px 0;
+    }
+    .recipes_title {
+        font-size: 20px;
+        text-align: center;
+    }
+     /* RECIPES */
+     /* CHALLENGE */
+    .challenge_content-title {
+        font-size: 20px;
+    }
+    /* CHALLENGE */
+    /* FOOTER */
+    .footer_info {
+        font-size: 10px;
+    }
+    .link_icon {
+        font-size: 12px;
+    }
+    .link_icon:not(:last-child) {
+        padding-right: 15px;
+    } 
+    /* FOOTER */      
+}
+@media (max-width: 420px){
+    /* HERO */
+    .hero_content-title{
+        font-size: 30px;   
+    }
+     /* HERO */
+     /* PLACE */
+    .place_btn{
+        padding: 6px 20px;
+        font-size: 11px;
+    }
+    /* PLACE */
+    /* COLLECTION */
+    .collection_title {
+        font-size: 25px;
+    }
+    /* COLLECTION */
+    /* FOOTER */
+    .footer_info {
         font-size: 8px;
     }
-    .footer_links:not(:last-child){
-        margin-right:3px ;
+    .link_icon {
+        font-size: 10px;
     }
-    .link_icon:not(:last-child){
-        padding-right:5px;
-    }
+    .link_icon:not(:last-child) {
+        padding-right: 10px;
+    }  
+    /* FOOTER */
 }
-@media (max-width: 375px){
-    .hero_content-title{
-        font-size: 20px;
-        margin-left: 15px; 
-    }
-}
+@media (max-width: 375px){}
    
 
 

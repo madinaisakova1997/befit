@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -33,9 +34,6 @@ button {
     flex-wrap: wrap;
     margin: 0 -10px;    
 }
-.gap {
-    gap: 30px;
-}
 .col-4 {
     width: 33.33%;
 }
@@ -58,11 +56,11 @@ button {
 .j-b {
     justify-content: space-between;
 }
-.a-c {
-    align-items: center;
-}
 .j-c{
     justify-content: center;
+}
+.a-c{
+    align-items: center;
 }
 /* BASE CONFIG */
 /* MOBILE-MENU */
@@ -126,7 +124,7 @@ button {
 }
 .header_logo{
     color: #000000;
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 50px;
 }
 .header_link{
@@ -164,30 +162,23 @@ button {
     background-color: black; /* Цвет подчеркивания при появлении линии*/
     transition: width 0.5s;  /* Время эффекта */
 }
-.header_btn{
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+.header_svg{
     color: #373535;
-    opacity: 0.9;
-    transition: 0.5s;
-    border-radius: 5px;
-    border:none;
-    padding: 10px 20px;
+    width: 25px;
     transition: .6s;
+    text-align: center;
 }
-.header_btn:hover{
-    color: #f3f3f3;
-    background: #373535;
-
+.header_svg:hover{
+    color:  #b02323;
 }
 /* HEADER */
 /* HERO */
 .hero{
-    background: url(../img/watch1.jpg) no-repeat center/cover;
-    height: 760px;
+    background: url(../img/hero.jpg) no-repeat center/cover;
+    height: calc(100vh - 140px);
     display: flex;
     align-items: center;
+
 }
 .hero_content-title{
     font-weight: 500;
@@ -195,13 +186,15 @@ button {
     letter-spacing: 7px;
     color: #525252;
     text-transform: uppercase;
-    margin-left: 100px;   
+    text-shadow: 1px 1px 2px #fff, 0 0 1em aliceblue, 0 0 0.2em gainsboro;
 }
 /* HERO */
 /* PLACE */
-
 .place_cards-img{
     width: 100%;
+}
+.place_content{
+    width: 50%;
 }
 .place-subtitle{
     font-weight: 500;
@@ -227,7 +220,7 @@ button {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #525252;
-    margin: 50px 0;
+    margin-bottom: 20px;
 }
 .hover-image-scale {
     display: inline-block; 
@@ -248,8 +241,7 @@ button {
     background-color: transparent;
     border: 2px solid #525252;
     border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.950em;
+    font-size: 15px;
     line-height: 1;
     margin: 15px;
     padding: 10px 30px;
@@ -270,17 +262,17 @@ button {
     outline: 0;
 }
 /* PLACE */
-/* ARRIVALS */
-.arrivals{
+/* collection*/
+.collection{
     padding: 100px 0;
     background: #fff;
 }
-.arrivals-cards-img{
+.collection-cards-img{
     height: 100%;
     width: 100%;
 
 }
-.arrivals_title{
+.collection_title{
     font-weight: 500;
     font-size: 40px;
     text-align: center;
@@ -289,7 +281,7 @@ button {
     color: #525252;
     margin-bottom: 50px;
 }
-.arrivals-cards-title{
+.collection-cards-title{
     font-weight: 700;
     font-size: 18px;
     line-height: 20px;
@@ -306,7 +298,7 @@ button {
     padding: 0;
     transition: .4;
 }
-.hover-effect-scale li {
+.hover-effect-scale div {
     position: relative;
     display: inline-block;
     margin: 0;
@@ -315,11 +307,11 @@ button {
     overflow: hidden;
 }
 /* Заголовок, текст и ссылка */
-.hover-effect-scale li .arrivals-cards-title{
+.hover-effect-scale div .collection-cards-title{
     color: #f3f3f3;
     margin: 5px;
 }
-.hover-effect-scale li .arrivals-cards-links {
+.hover-effect-scale div .collection-cards-links {
     display: block;
     text-decoration: none;
     padding: 10px;
@@ -329,12 +321,12 @@ button {
     margin: 0 auto;
     transition: all 0.4s ease-in-out;
 }
-.hover-effect-scale li .arrivals-cards-links:hover {
+.hover-effect-scale div .collection-cards-links:hover {
     background: #fff;
     color: #525252;
 }
 /* Выезжающий блок с текстом */ 
-.hover-effect-scale li > div {
+.hover-effect-scale div  div {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -342,37 +334,40 @@ button {
     justify-content: center;
     flex-direction: column;
 }
-.hover-effect-scale li:hover > div {
+.hover-effect-scale div:hover  div {
     position: absolute;
     overflow: hidden;
     top: 0;
     left: 0;
 }
-.hover-effect-scale li div {
+.hover-effect-scale div div {
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.35); /* Фон блока при наведении */
     transition: all 0.4s ease-in-out;
     color: #fff;
 }
-.hover-effect-scale li .arrivals-cards-img {
+.hover-effect-scale div .collection-cards-img {
     transition: all 0.2s linear;
 }
-.hover-effect-scale li:hover img {
+.hover-effect-scale div:hover img {
     transform: scale(1.3);
 }
-.hover-effect-scale li:hover div {
+.hover-effect-scale div:hover div {
     opacity: 1;
 }
-/* ARRIVALS */
+/* collection*/
 /* RECIPES */
 .recipes{
     padding: 100px 0;
 }
 .recipes_content{
-    background: #fff;
     border-radius: 15px;
     padding: 20px;
-    margin-top:140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 .recipes_title{
     font-weight: 400;
@@ -388,7 +383,8 @@ button {
     border-radius: 50%;
     -webkit-transition: -webkit-transform .8s ease-in-out;
       transition:         transform .8s ease-in-out;
-}
+      box-shadow: rgba(0, 0, 0, 0.90) 0px 0px 15px;
+    }
 .recipes_img:hover{
     -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
@@ -427,7 +423,7 @@ button {
     width: 0;
     height: 2px; /* Высота линии */
     background-color: black; /* Цвет подчеркивания при исчезании линии*/
-    transition: width 0.5s; /* Время эффекта */
+    transition: width 0.7s; /* Время эффекта */
 }
 .recipes_links:hover:after {
 	content: "";
@@ -438,7 +434,7 @@ button {
     bottom: -3px;
     height: 2px; /* Высота линии */
     background-color: black; /* Цвет подчеркивания при появлении линии*/
-    transition: width 0.5s;  /* Время эффекта */
+    transition: width 0.7s;  /* Время эффекта */
 }
 /* RECIPES */
 /* CHALLENGE */
@@ -452,7 +448,9 @@ button {
     text-align: center;
     letter-spacing: 5px;
     text-transform: uppercase;
-    color: #fff;}
+    color: #fff;
+    text-shadow: 1px 1px 2px #494a4a, 0 0 1em aliceblue, 0 0 0.2em gainsboro;
+}
 .challenge_content-subtitle{
     font-weight: 500;
     font-size: 16px;
@@ -481,7 +479,7 @@ button {
 	margin: 0;
 	width: 100%;
 	list-style: none;
-	text-align: center;
+	
 }
 .challenge_content figure {
 	position: relative;
@@ -516,9 +514,6 @@ button {
 	left: 0;
 	width: 100%;
 	height: 100%;
-}
-.challenge_content figure h3{
-	margin: 200px 0 0 0;
 }
 .challenge_content figure p {
 	letter-spacing: 1px;
@@ -586,45 +581,31 @@ figure.effect:hover p {
 .footer{
     padding: 20px 0;
 }
-.footer_logo{
-    font-size: 30px;
-    font-weight: 600;
-    color: #373535;
-    text-transform: uppercase;
+.heart{
+    color: #b02323;
 }
 .line{
     background: #373535;
     border-radius: 0px;
     height: 3px;
-    margin: 30px 0;
-}
+    margin-bottom: 30px;}
 .footer_info{
     font-weight: 400;
     font-size: 14px;
     line-height: 14px;
-    color: #373535; 
+    color: #373535;
+    text-transform: uppercase;
 }
-.footer_links{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 14px;
-    color: #373535; 
-    transition: 0.4s;  
-}
-.footer_links:not(:last-child){
-    margin-right:20px ;
-}
-.footer_links:hover{
-    text-decoration: underline;
+.footer_logo{
+    color: #000000;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18px;
 }
 .link_icon{
     color:  #b02323;
     font-size: 20px; 
     transition: 0.4s;  
-    cursor: pointer; 
-}
-.link_icon:nth-child(1){
-    margin-left:200px ;
 }
 .link_icon:not(:last-child){
     padding-right:20px;
